@@ -1,0 +1,102 @@
+// 从屏幕右侧进入
+.slide-in-from-right-enter-from,
+.slide-in-from-right-leave-to {
+  // transform: translateX(100%);
+  transform-origin: right center;
+  transform: scaleX(0);
+  // opacity: 0;
+}
+.slide-in-from-right-enter-active,
+.slide-in-from-right-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+// 从屏幕下方进入
+.slide-in-from-bottom-enter-from,
+.slide-in-from-bottom-leave-to {
+  transform: (translateY(100%));
+  opacity: 0;
+}
+.slide-in-from-bottom-enter-active,
+.slide-in-from-bottom-leave-active {
+  transition: all 0.2s ease-out;
+}
+
+// 从左侧缩放
+.fade-from-left-enter-active {
+  animation: zoom-in-left 0.2s;
+}
+.fade-from-left-leave-active {
+  animation: zoom-in-left 0.2s reverse;
+}
+
+// 从上方缩放
+.fade-from-top-enter-active {
+  animation: zoom-in-top 0.2s;
+}
+.fade-from-top-leave-active {
+  animation: zoom-in-top 0.2s reverse;
+}
+
+// 组件的fade效果
+.cpn-fade-in-right-enter-active {
+  transition: all 0.2s ease-in;
+}
+.cpn-fade-in-right-enter-from {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+/**
+* 列表的过渡
+*/
+
+// 横向列表fade效果
+.list-horizontal-fade-enter-active,
+.list-horizontal-fade-leave-active {
+  transition: all 0.3s;
+}
+.list-horizontal-fade-enter-from,
+.list-horizontal-fade-enter-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.list-horizontal-fade-leave-active {
+  position: absolute;
+}
+
+@keyframes zoom-in-left {
+  0% {
+    transform-origin: left center;
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform-origin: left center;
+    transform: scaleX(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform-origin: left center;
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in-top {
+  0% {
+    transform-origin: center top;
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform-origin: center top;
+    transform: scaleY(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform-origin: center top;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

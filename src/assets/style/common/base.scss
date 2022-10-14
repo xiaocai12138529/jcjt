@@ -1,0 +1,107 @@
+// 初始化css样式
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  color: #333;
+  font-size: 16px !important;
+  font-family: Arial, Helvetica, sans-serif;
+  // font: 14px/20px "SimSun", "Arial Narrow", HELVETICA;
+}
+
+/* 清除特殊标记的字体和字号 */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-weight: normal;
+  font-style: normal;
+}
+fieldset,
+img,
+abbr,
+acronym {
+  border: 0 none;
+}
+abbr,
+acronym {
+  font-variant: normal;
+}
+legend {
+  color: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+button,
+input,
+select {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+html {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}

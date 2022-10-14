@@ -1,0 +1,13 @@
+@import url(./common/base.scss);
+@import url(./common/utils.scss);
+@import url(./antd.scss);
+@import url(./common/transition.scss);
+@import url(./common/variables.scss);
+#app {
+  height: 100vh;
+  width: 100vw;
+}
+#nprogress .bar {
+  background-color: #d9eeff;
+  height: 3px;
+}

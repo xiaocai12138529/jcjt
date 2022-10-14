@@ -1,0 +1,50 @@
+.ant-table-pagination.ant-pagination {
+  float: left;
+  .ant-pagination-item,
+  .ant-pagination-item-link {
+    border-radius: 5px;
+  }
+  .ant-pagination-item-active {
+    background-color: #1990ff;
+    a {
+      color: #fff;
+    }
+  }
+}
+.ant-btn.warning {
+  background-color: #fdf5e9;
+  border-color: #e29836;
+  color: #e29836;
+  &.ant-btn-link {
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+.ant-btn.success {
+  border-color: #47ae69;
+  color: #7ac756;
+  background-color: #eef8e8;
+}
+.ant-btn.primary {
+  border-color: #3894ff;
+  color: #3894ff;
+  background-color: #e9f3ff;
+}
+.ant-btn.danger {
+  border-color: #f26161;
+  color: #f26161;
+  background-color: #feeeee;
+}
+.ant-layout-sider-trigger {
+  background-color: #ccc;
+}
+.ant-menu-inline {
+  overflow-x: hidden;
+  .ant-menu-item {
+    margin-left: -1px;
+  }
+}
+.middle.ant-modal {
+  top: 50%;
+  transform: translateY(-50%);
+}
