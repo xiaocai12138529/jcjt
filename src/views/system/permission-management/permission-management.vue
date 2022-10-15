@@ -2,23 +2,14 @@
   <div>
     <div class="tootip">
       <a-space :size="12">
-        <a-select ref="select" style="width: 450px" placeholder="请选择铁路">
-          <a-select-option value="jack">Jack</a-select-option>
-          <a-select-option value="lucy">Lucy</a-select-option>
-          <a-select-option value="disabled" disabled>Disabled</a-select-option>
-          <a-select-option value="Yiminghe">yiminghe</a-select-option>
-        </a-select>
-        <a-select ref="select" style="width: 256px" placeholder="请选择">
-          <a-select-option value="jack">Jack</a-select-option>
-          <a-select-option value="lucy">Lucy</a-select-option>
-          <a-select-option value="disabled" disabled>Disabled</a-select-option>
-          <a-select-option value="Yiminghe">yiminghe</a-select-option>
-        </a-select>
-        <a-button type="primary">类型设置</a-button>
         <a-range-picker />
-        <a-input-search placeholder="关键字" style="width: 200px" />
+        <a-input-search
+          placeholder="请输入项目名称/负责人的关键字"
+          style="width: 300px"
+        />
         <a-button type="primary">查询</a-button>
       </a-space>
+      <a-button type="primary" class="fr">增加</a-button>
     </div>
     <div class="context mt10">
       <a-table
@@ -31,12 +22,11 @@
     </div>
   </div>
 </template>
-
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { data as datax, columns } from '@/utils/ls-data'
 export default defineComponent({
-  name: 'fine-measurement',
+  name: 'permission-management',
   setup() {
     const data = computed(() => {
       const da = JSON.parse(JSON.stringify(datax))

@@ -8,6 +8,7 @@ const route: RouteRecordRaw = {
   meta: {
     title: '综合信息看板',
   },
+  redirect: '/board/plane',
 }
 
 export default route

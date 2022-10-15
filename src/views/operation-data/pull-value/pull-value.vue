@@ -1,11 +1,11 @@
 <template>
-  <div><router-view /></div>
+  <div></div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'BOARD',
+  name: 'pull-value',
   setup() {
     return {}
   },

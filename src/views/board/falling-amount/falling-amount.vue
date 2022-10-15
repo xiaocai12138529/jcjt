@@ -36,7 +36,7 @@
 import { computed, defineComponent } from 'vue'
 import { data as datax, columns } from '@/utils/ls-data'
 export default defineComponent({
-  name: 'fine-measurement',
+  name: 'falling-amount',
   setup() {
     const data = computed(() => {
       const da = JSON.parse(JSON.stringify(datax))

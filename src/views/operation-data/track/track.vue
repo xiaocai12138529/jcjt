@@ -1,23 +1,24 @@
 <template>
   <div>
-    <img src="./1665840447077.jpg" alt="" />
+    <div class="diy">轨道几何参数</div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'HOME',
+  name: 'TRACK',
   setup() {
     return {}
   },
 })
 </script>
 <style scoped lang="scss">
-img {
-  width: 90%;
-  height: 90%;
-  display: inline-block;
-  margin: 0 5%;
+.diy {
+  color: #fff;
+  width: 100%;
+  height: 50vh;
+  border: 1px solid #217186;
+  border-radius: 8px;
 }
 </style>

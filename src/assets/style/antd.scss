@@ -48,3 +48,86 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: transparent;
+  border: 1px solid #217186;
+  .ant-select-selection-item {
+    color: #fff;
+  }
+}
+.tootip {
+  .ant-select-arrow {
+    color: #fff;
+  }
+}
+.ant-picker {
+  background-color: transparent;
+  border: 1px solid #217186;
+  .ant-picker-suffix,
+  input,
+  .ant-picker-range-separator,
+  .ant-picker-separator {
+    color: #fff;
+  }
+}
+.ant-input {
+  background-color: transparent;
+  border: 1px solid #217186;
+}
+.ant-input-search .ant-input-group-addon .ant-btn,
+.ant-input-group-addon {
+  background-color: transparent;
+  border: 1px solid #217186;
+  border-left: 0px;
+  color: #fff !important;
+}
+.ant-input-group > .ant-input:first-child,
+.ant-input-group-addon:first-child {
+  border-right: 0;
+}
+.ant-table {
+  background-color: transparent;
+  // border: 1px solid #217186;
+  color: #fff;
+}
+.ant-table-thead > tr > th {
+  background-color: transparent;
+  color: #fff;
+  border-bottom: 1px solid #217186;
+  &::before {
+    background-color: #217186 !important;
+  }
+}
+.ant-table-tbody > tr > td {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px;
+  border-bottom: 0px solid #217186;
+}
+.ant-table-tbody > tr.ant-table-row:hover > td,
+.ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background-color: #2189d3d4;
+}
+.ant-spin-container {
+  .ant-pagination {
+    .ant-pagination-item-link {
+      background-color: transparent;
+      border: 1px solid #217186;
+      color: #fff;
+    }
+  }
+}
+.ant-pagination-item {
+  background-color: transparent;
+  border: 1px solid #217186;
+  a {
+    color: #fff;
+  }
+}
+// .ant-select-dropdown {
+//   background-color: rgb(32 73 167);
+// }
+// .ant-select-item {
+//   color: #fff;
+// }

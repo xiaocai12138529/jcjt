@@ -4,21 +4,21 @@
       <div
         class="router-item"
         :class="{ active: active == 1 }"
-        @click="to('track-status-detection', 1)"
+        @click="to('Home', 1)"
       >
         综合信息看板
       </div>
       <div
         class="router-item"
         :class="{ active: active == 2 }"
-        @click="to('track-status-detection', 2)"
+        @click="to('board', 2)"
       >
         拟合成果展示
       </div>
       <div
         class="router-item"
         :class="{ active: active == 3 }"
-        @click="to('track-status-detection', 3)"
+        @click="to('operation-data', 3)"
       >
         工序数据管理
       </div>
@@ -44,7 +44,7 @@
       <div
         class="router-item"
         :class="{ active: active == 6 }"
-        @click="to('track-status-detection', 6)"
+        @click="to('system', 6)"
       >
         系统维护管理
       </div>

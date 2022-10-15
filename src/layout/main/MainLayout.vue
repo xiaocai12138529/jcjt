@@ -74,6 +74,7 @@ export default defineComponent({
     // display: flex;
     // justify-content: space-between;
     position: relative;
+    margin-top: 20px;
     .route-tab-2 {
       color: rgba(117, 249, 253, 0.39);
       :deep().ant-tabs-tab {

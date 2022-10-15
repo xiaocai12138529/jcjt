@@ -4,10 +4,13 @@ const allRoutes: any = []
 routeFiles.keys().forEach((key) => {
   const routes = require('./menus' + key.slice(1))
   allRoutes.push(routes.default)
-  // console.log(allRoutes)
 })
 const arr: any = []
 const setChildrenRoute = (routes: any) => {
+  routes.sort(
+    (a: any, b: any) => a.path.split('/').length - b.path.split('/').length
+  )
+
   routes.map((res: any) => {
     const path = res.path.split('/')
     if (path.length == 2) {
@@ -16,7 +19,7 @@ const setChildrenRoute = (routes: any) => {
     if (path.length == 3) {
       const i = arr.findIndex((item: any) => item.name == path[1])
       if (!arr[i]?.children) arr[i]['children'] = []
-      arr[i]['children'].push(res)
+      arr[i]['children'].unshift(res)
     }
   })
 }

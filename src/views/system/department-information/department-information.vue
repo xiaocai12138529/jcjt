@@ -1,11 +1,11 @@
 <template>
-  <div><router-view /></div>
+  <div>部门信息</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'BOARD',
+  name: 'department-information',
   setup() {
     return {}
   },

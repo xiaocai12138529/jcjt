@@ -1,11 +1,11 @@
 <template>
-  <div><router-view /></div>
+  <div>123</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'BOARD',
+  name: 'SECTIONDATA',
   setup() {
     return {}
   },
