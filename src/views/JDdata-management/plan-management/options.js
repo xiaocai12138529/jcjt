@@ -1,12 +1,9 @@
 // import { Rules } from '@/views/validate'
 const baseURL = process.env.VUE_APP_TRACK_URL
 export const accountoptions = [
-    {
-        name: "大机捣固", id: 1, children: [
-            { name: "施工管理", id: 1 },
-        ]
-    }
-];
+    { name: "计划录入", id: 1 },
+    { name: "计划进度", id: 1 },
+]
 export const columData = [
     { prop: "lineName", label: "所属线路" },
     { prop: "goType", label: "行别" },
@@ -35,4 +32,4 @@ export const apiurls = {
     delurl: baseURL + "/Api/JcjdMan/DgPlan/Delete",
     dowload: baseURL + "/Api/JcjdMan/XzjlDeviationMan/Export",
     upload: baseURL + "/Api/JcjdMan/XzjlDeviationMan/Import"
-};
+}

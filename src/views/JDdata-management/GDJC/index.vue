@@ -6,20 +6,8 @@
         <FormTab :activetab="activetab" :tablist="tablist" @formchange="formchange"></FormTab>
         <!-- 计划控制搜索 -->
         <SearchDwXlJh @planIdChange="planIdChange" v-if="activetab !== '坐标系统'" />
-        <div class="lrbtn flexbox">
-          <el-input placeholder="请输入点号关键字" clearable v-model="key" style="width: 200px; margin-right: 10px" @clear="search" v-if="activetab == '坐标系统'">
-            <template #suffix>
-              <el-icon style="cursor: pointer" @click.stop="search">
-                <Search />
-              </el-icon>
-            </template>
-          </el-input>
-          <el-button type="primary" @click.stop="handleclick('addcoord', {})" v-if="activetab == '坐标系统'">新增坐标系统</el-button>
-        </div>
       </div>
-      <!-- 主体展示表格 -->
-      <COORDINATE ref="coordinate" v-if="activetab == '坐标系统'" />
-      <BASEBOX v-else :activetab="activetab" :planId="planId"></BASEBOX>
+      <BASEBOX :activetab="activetab" :planId="planId"></BASEBOX>
     </div>
   </div>
 </template>
@@ -28,14 +16,12 @@
 import FormTab from '@/components/component/formtab'
 import SearchDwXlJh from '../components/searchDwXlJh'
 import BASEBOX from './base.vue'
-import COORDINATE from './coordinate/coordinate.vue'
-import { reactive, ref, toRefs } from 'vue-demi'
+import { reactive, toRefs } from 'vue-demi'
 import { accountoptions } from './option'
 export default {
-  name: 'JCKZ',
-  components: { FormTab, BASEBOX, SearchDwXlJh, COORDINATE },
+  name: 'GDJC',
+  components: { FormTab, BASEBOX, SearchDwXlJh },
   setup() {
-    const coordinate = ref(null)
     const data = reactive({
       tablist: accountoptions,
       activetab: accountoptions[0].name,
@@ -52,16 +38,7 @@ export default {
       data.planId = val
     }
 
-    const handleclick = (type) => {
-      if (type == 'addcoord') {
-        coordinate.value.addcoordFn()
-      }
-    }
-    const search = () => {
-      coordinate.value.key = data.key
-      coordinate.value.getdata()
-    }
-    return { ...toRefs(data), formchange, planIdChange, handleclick, search, coordinate }
+    return { ...toRefs(data), formchange, planIdChange }
   },
 }
 </script>

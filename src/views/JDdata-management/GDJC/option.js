@@ -2,12 +2,10 @@ import { Rules } from '@/views/validate'
 const baseURL = process.env.VUE_APP_TRACK_URL
 export const accountoptions =
     [
-        { name: "坐标系统", id: 1 },
-        { name: "CPI", id: 2 },
-        { name: "CPII", id: 3 },
-        { name: "CPIII", id: 4 },
-        { name: "高程网", id: 5 },
-        { name: "加密水准", id: 6 },
+        { name: "测量成果", id: 1 },
+        { name: "逐桩数据", id: 2 },
+        { name: "限界/导高/拉出值", id: 3 },
+        { name: "测量TQI", id: 4 },
     ]
 
 export const columData = {
@@ -45,11 +43,14 @@ export const columData = {
 export const formItems = {
 
 
-    "坐标系统": [
-        { type: "input", label: "点号", prop: "pointNo", rules: Rules.Text(true) },
-        { type: "number", label: "位置(X)", prop: "location_X" },
-        { type: "number", label: "位置(Y)", prop: "location_Y" },
-        { type: "textarea", label: "备注", prop: "remark" }
+    "限界/导高/拉出值": [
+        { type: "number", prop: "mileage_Through", label: "贯通里程", rules: Rules.Number(true) },
+        { type: "number", prop: "minDistance_L", label: "左侧最近距离（mm）" },
+        { type: "number", prop: "height_L", label: "左侧相对高度（mm）" },
+        { type: "number", prop: "minDistance_R", label: "右侧最近距离（mm）" },
+        { type: "number", prop: "height_R", label: "右侧相对高度（mm）" },
+        { type: "number", prop: "guideHeight", label: "导高（mm）" },
+        { type: "number", prop: "staggerValue", label: "拉出值（mm）" },
     ],
     "CPI": [
         { type: "input", label: "点号", prop: "pointNo", rules: Rules.Text(true) },
@@ -84,7 +85,7 @@ export const formItems = {
 }
 export const apiurls = {
 
-    "坐标系统": {
+    "测量成果": {
         listurl: baseURL + "/Api/JcjdMan/XzjlCPI/GetListByPage",
         addurl: baseURL + "/Api/JcjdMan/XzjlCPI/Add",
         editurl: baseURL + "/Api/JcjdMan/XzjlCPI/Edit",
@@ -93,7 +94,7 @@ export const apiurls = {
         upload: baseURL + "/Api/JcjdMan/XzjlCPI/Import",
         delallurl: baseURL + "/Api/JcjdMan/XzjlCPI/DeleteByDataPerid"
     },
-    "CPI": {
+    "逐桩数据": {
         listurl: baseURL + "/Api/JcjdMan/XzjlCPI/GetListByPage",
         addurl: baseURL + "/Api/JcjdMan/XzjlCPI/Add",
         editurl: baseURL + "/Api/JcjdMan/XzjlCPI/Edit",
@@ -102,16 +103,16 @@ export const apiurls = {
         upload: baseURL + "/Api/JcjdMan/XzjlCPI/Import",
         delallurl: baseURL + "/Api/JcjdMan/XzjlCPI/DeleteByDataPerid"
     },
-    "CPII": {
-        listurl: baseURL + "/Api/JcjdMan/XzjlCPII/GetListByPage",
-        addurl: baseURL + "/Api/JcjdMan/XzjlCPII/Add",
-        editurl: baseURL + "/Api/JcjdMan/XzjlCPII/Edit",
-        delurl: baseURL + "/Api/JcjdMan/XzjlCPII/Delete",
-        dowload: baseURL + "/Api/JcjdMan/XzjlCPII/Export",
-        upload: baseURL + "/Api/JcjdMan/XzjlCPII/Import",
-        delallurl: baseURL + "/Api/JcjdMan/XzjlCPII/DeleteByDataPerid"
+    "限界/导高/拉出值": {
+        listurl: baseURL + "/Api/JcjdMan/XzjlOCS/GetListByPage",
+        addurl: baseURL + "/Api/JcjdMan/XzjlOCS/Add",
+        editurl: baseURL + "/Api/JcjdMan/XzjlOCS/Edit",
+        delurl: baseURL + "/Api/JcjdMan/XzjlOCS/Delete",
+        dowload: baseURL + "/Api/JcjdMan/XzjlOCS/Export",
+        upload: baseURL + "/Api/JcjdMan/XzjlOCS/Import",
+        delallurl: baseURL + "/Api/JcjdMan/XzjlOCS/DeleteByDataPerid"
     },
-    "CPIII": {
+    "测量TQI": {
         listurl: baseURL + "/Api/JcjdMan/XzjlCPIII/GetListByPage",
         addurl: baseURL + "/Api/JcjdMan/XzjlCPIII/Add",
         editurl: baseURL + "/Api/JcjdMan/XzjlCPIII/Edit",

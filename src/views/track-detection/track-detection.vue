@@ -27,7 +27,7 @@
                 </el-icon>
               </template>
             </el-input>
-            <el-button type="primary" :disabled="!projectid" @click.stop="handleclick('addcoord', {})" v-if="activetab == '坐标系统'">新增坐标系统</el-button>
+            <el-button type="primary" @click.stop="handleclick('addcoord', {})" v-if="activetab == '坐标系统'">新增坐标系统</el-button>
           </div>
         </div>
         <CoordinateBox ref="coordinate" v-if="activetab == '坐标系统'" :projectid="projectid"></CoordinateBox>

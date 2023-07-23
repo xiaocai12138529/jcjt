@@ -4,12 +4,12 @@
       <el-cascader :props="propsSelect" placeholder="请选择单位/部门" style="width: 180px" @change="cascaderDW" clearable></el-cascader>
     </div>
     <div>
-      <el-select v-model="LineId" default-first-option placeholder="所属线路" clearable style="margin-right: 10px; width: 180px" @change="getPlanList">
+      <el-select v-model="LineId" placeholder="所属线路" clearable style="margin-right: 10px; width: 180px" @change="getPlanList">
         <el-option v-for="item in XLlist" :key="item.id" :label="item.name" :value="item.id">{{ item.name }} </el-option>
       </el-select>
     </div>
     <div>
-      <el-select v-model="planId" default-first-option placeholder="选择计划" clearable style="margin-right: 10px; width: 180px" @change="planChange" placement="bottom-end">
+      <el-select v-model="planId" placeholder="选择计划" clearable style="margin-right: 10px; width: 180px" @change="planChange" placement="bottom-end">
         <el-option v-for="item in planOption" :key="item.id" :label="item.name" :value="item.id">{{ item.name }} </el-option>
       </el-select>
     </div>
@@ -44,7 +44,7 @@ export default defineComponent({
     })
 
     const planChange = () => {
-      emit('planIdChange', data.planId)
+      emit('planIdChange', data.planId ? data.planId : null)
     }
 
     // 获取线路类型

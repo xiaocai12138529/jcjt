@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <PublicDialog ref="AddDialogdom" @addsure="addsure" :title="addtitle" :editData="editData" :formItems="formItems" :activetab="activetab"></PublicDialog>
+    <PublicDialog ref="AddDialogdom" @addsure="addsure" :title="addtitle" :editData="editData" :formItems="formItems" :activetab="activetab" :labelwidth="labelwidth"></PublicDialog>
     <BachUpload ref="bachupload" :showsurebtn="false" @uploadsuccess="refreshdata" :actionurl="actionurl"></BachUpload>
   </div>
 </template>
@@ -87,6 +87,7 @@ export default defineComponent({
       formItems: formItems[props.activetab], // 表单
       currentapiurl: apiurls[props.activetab], // 路径
       staterAndEndTime: '', // 时间搜索参数
+      labelwidth: computed(() => (props.activetab == '轨道线形检测数据' || props.activetab == '限界/导高/拉出值' ? '180px' : '120px')),
     })
 
     // 表格分页切换事件
@@ -196,7 +197,7 @@ export default defineComponent({
       data.columObj.loading = true
       service
         .get({
-          url: data.currentapiurl.listurl,
+          url: data?.currentapiurl?.listurl,
           params: {
             // ProjectId: props.projectid ? props.projectid : -1,
             // renwu: -1 , 预留任务id
