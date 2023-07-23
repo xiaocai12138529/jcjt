@@ -7,8 +7,11 @@
       </div>
       <JCKZ v-else-if="activemenu == 2"></JCKZ>
       <GDJC v-else-if="activemenu == 3"></GDJC>
-      <GDXZJC v-else-if="activemenu == 4"></GDXZJC>
-      <PZDMYH v-else-if="activemenu == 5"></PZDMYH>
+      <YHSJ v-else-if="activemenu == 4"></YHSJ>
+      <!-- <GDXZJC v-else-if="activemenu == 4"></GDXZJC> -->
+      <YHPJ v-else-if="activemenu == 5"></YHPJ>
+      <DGPJ v-else-if="activemenu == 7"></DGPJ>
+      <!-- <PZDMYH v-else-if="activemenu == 5"></PZDMYH> -->
       <DJDGWX v-else-if="activemenu == 6"></DJDGWX>
     </div>
   </div>
@@ -17,15 +20,18 @@
 <script>
 import { defineComponent, reactive, toRefs } from 'vue'
 import PublicMenu from '@/components/publicMenu/publicMenu.vue'
-import GDXZJC from '@/views/track-detection/track-detection.vue'
-import PZDMYH from '@/views/section-optimization/section-optimization.vue'
+// import GDXZJC from '@/views/track-detection/track-detection.vue'
+// import PZDMYH from '@/views/section-optimization/section-optimization.vue'
 import DJDGWX from '@/views/machine-maintenance/machine-maintenance.vue'
 import JHGL from '@/views/JDdata-management/plan-management/index.vue'
 import JCKZ from './JCKZ/index.vue'
 import GDJC from './GDJC/index.vue'
+import YHSJ from './YHSJ/index.vue'
+import YHPJ from './YHPJ/index.vue'
+import DGPJ from './DGPJ/index.vue'
 export default defineComponent({
   name: 'account-management',
-  components: { PublicMenu, GDXZJC, PZDMYH, DJDGWX, JHGL, JCKZ, GDJC },
+  components: { PublicMenu, JHGL, JCKZ, GDJC, YHSJ, YHPJ, DGPJ, DJDGWX },
   setup() {
     const data = reactive({
       activemenu: 1,

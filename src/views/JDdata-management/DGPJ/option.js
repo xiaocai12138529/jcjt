@@ -2,16 +2,14 @@ import { Rules } from '@/views/validate'
 const baseURL = process.env.VUE_APP_TRACK_URL
 export const accountoptions =
     [
-        { name: "测量成果", id: 1 },
-        { name: "逐桩数据", id: 2 },
-        { name: "限界/导高/拉出值", id: 3 },
         {
-            name: "测量TQI", id: 4, children: [
+            name: "捣固后静态TQI", id: 1, children: [
                 { name: 'TQI管理值', id: 1 },
                 { name: 'TQI峰值', id: 2 },
                 { name: 'TQI超限统计', id: 3 },
             ]
         },
+        { name: "捣固前后TQI对比", id: 2 },
     ]
 
 export const columData = {

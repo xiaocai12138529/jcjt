@@ -70,7 +70,13 @@ export default defineComponent({
     const AddDialogdom = ref(null) // 表单dom
     const bachupload = ref(null) // 下载dom
     const actionurl = computed(() => data.currentapiurl?.upload + '?ProjectId=' + props.projectid + '&peoplename=' + storage.getStorage('userinfo').realName) // 上传路径
-
+    const fullName = computed({
+      get: () => {
+        const arr = accountoptions.find((res) => res.name == props.activetab)?.children
+        return arr?.length ? arr[0].name : ''
+      },
+      set: (val) => val,
+    })
     const data = reactive({
       key: '',
       tableheight: computed(() => (props.showleftType == 3 ? 'calc(100vh - 300px)' : 'calc(100vh - 340px)')),
@@ -93,7 +99,7 @@ export default defineComponent({
       currentapiurl: apiurls[props.activetab], // 路径
       staterAndEndTime: '', // 时间搜索参数
       labelwidth: computed(() => (props.activetab == '轨道线形检测数据' || props.activetab == '限界/导高/拉出值' ? '180px' : '120px')),
-      tablemodel: 'TQI管理值', //第三级名字
+      tablemodel: fullName.value, //第三级名字
       radiolist: computed(() => accountoptions.find((res) => res.name == props.activetab)?.children),
     })
 
