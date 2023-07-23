@@ -1,0 +1,10 @@
+.list-ease-in-enter-active,
+.list-ease-in-leave-active {
+  transition: all .5s linear;
+}
+
+.list-ease-in-enter,
+.list-ease-in-leave-to {
+  opacity: 0;
+  transform: translate(-10px);
+}

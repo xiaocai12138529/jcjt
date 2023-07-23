@@ -1,20 +1,21 @@
 <template>
-  <a-config-provider :locale="locale">
-    <router-view />
-  </a-config-provider>
+  <router-view />
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import zhCn from "ant-design-vue/lib/locale/zh_CN.js";
-// import "@/assets/icon/iconfont.js";
-export default defineComponent({
-  setup() {
-    return {
-      locale: zhCn,
-    };
-  },
-});
+<script>
+  import { defineComponent } from "vue";
+  export default defineComponent({
+    setup() {
+     
+    }
+  })
 </script>
+
 <style lang="scss">
+body{padding: 0 !important;margin: 0 !important;}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #101010;
+}
 </style>
